@@ -372,7 +372,7 @@ void processFolder(const std::string& inputFolder, const std::string& outputFold
 int main() {
 
     std::string inputFolder = "/home/joshua/Snake_Gate/masks";
-    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_detection";
+    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_detection_results";
     processFolder(inputFolder, outputFolder);
 
     return 0;

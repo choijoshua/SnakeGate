@@ -982,7 +982,7 @@ int main() {
     // std::string outputFolder = "/home/joshua/Snake_Gate/dataset_seg_241231/labels/snake_gate";
 
     std::string inputFolder = "/home/joshua/Snake_Gate/masks";
-    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_corner_refinement";
+    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_corner_refinement_results";
 
 
     processFolder(inputFolder, outputFolder);
