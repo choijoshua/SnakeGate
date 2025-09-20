@@ -161,7 +161,6 @@ void up_and_down(cv::Mat& im, int x, int y, int& xlow, int& ylow, int& xhigh, in
             done = true;
             xlow = x;
         }
-        change_pixel(im, x, ylow);
     }
 
     x = x_initial;
@@ -189,7 +188,6 @@ void up_and_down(cv::Mat& im, int x, int y, int& xlow, int& ylow, int& xhigh, in
             done = true;
             xhigh = x;
         }
-        change_pixel(im, x, yhigh);
     }
 }
 
@@ -220,7 +218,6 @@ void left_and_right(cv::Mat& im, int x, int y, int& xlow, int& ylow, int& xhigh,
             done = true;
             ylow = y;
         }
-        change_pixel(im, xlow, y);
     }
 
     y = y_initial;
@@ -248,8 +245,6 @@ void left_and_right(cv::Mat& im, int x, int y, int& xlow, int& ylow, int& xhigh,
             done = 1;
             yhigh = y;
         }
-
-        change_pixel(im, xhigh, y);
     }
 }
 
@@ -376,86 +371,9 @@ void processFolder(const std::string& inputFolder, const std::string& outputFold
 
 int main() {
 
-// Load input image
-    cv::Mat image1 = cv::imread("/home/joshua/Snake_Gate/00000.png", cv::IMREAD_COLOR);
-    cv::Mat image2 = cv::imread("/home/joshua/Snake_Gate/00001.png", cv::IMREAD_COLOR);
-    cv::Mat image3 = cv::imread("/home/joshua/Snake_Gate/00002.png", cv::IMREAD_COLOR);
-    cv::Mat image4 = cv::imread("/home/joshua/Snake_Gate/00003.png", cv::IMREAD_COLOR);
-    cv::Mat image5 = cv::imread("/home/joshua/Snake_Gate/00004.png", cv::IMREAD_COLOR);
-    cv::Mat image6 = cv::imread("/home/joshua/Snake_Gate/00844.png", cv::IMREAD_COLOR);
-    cv::Mat image7 = cv::imread("/home/joshua/Snake_Gate/00854.png", cv::IMREAD_COLOR);
-    cv::Mat image8 = cv::imread("/home/joshua/Snake_Gate/00866.png", cv::IMREAD_COLOR);
-    cv::Mat image9 = cv::imread("/home/joshua/Snake_Gate/00890.png", cv::IMREAD_COLOR);
-
-    Gate best_gate1;
-    Gate best_gate2;
-    Gate best_gate3;
-    Gate best_gate4;
-    Gate best_gate5;
-    Gate best_gate6;
-    Gate best_gate7;
-    Gate best_gate8;
-    Gate best_gate9;
-
-    gate_detection(image1, best_gate1, 400, 100);
-    gate_detection(image2, best_gate2, 400, 100);
-    gate_detection(image3, best_gate3, 400, 100);
-    gate_detection(image4, best_gate4, 400, 100);
-    gate_detection(image5, best_gate5, 400, 100);
-    gate_detection(image6, best_gate6, 400, 100);
-    gate_detection(image7, best_gate7, 400, 100);
-    gate_detection(image8, best_gate8, 400, 100);
-    gate_detection(image9, best_gate9, 400, 120);
-
-    // cv::Mat rotated_image1, rotated_image2, rotated_image3, rotated_image4, rotated_image5;
-
-    // rotate_image(image1, -45, rotated_image1);
-    // rotate_image(image2, -45, rotated_image2);
-    // rotate_image(image3, -40, rotated_image3);
-    // rotate_image(image4, -40, rotated_image4);
-    // rotate_image(image5, -40, rotated_image5);
-
-    // gate_detection(rotated_image1, best_gate1, 400, 100);
-    // gate_detection(rotated_image2, best_gate2, 400, 100);
-    // gate_detection(rotated_image3, best_gate3, 400, 50);
-    // gate_detection(rotated_image4, best_gate4, 400, 50);
-    // gate_detection(rotated_image5, best_gate5, 400, 50);
-    // gate_detection(image6, best_gate6, 400, 100);
-    // gate_detection(image7, best_gate7, 400, 100);
-    // gate_detection(image8, best_gate8, 400, 100);
-    // gate_detection(image9, best_gate9, 400, 120);
-
-    // Display the result
-    // cv::imshow("Rotated Image", rotated_image1);
-    // cv::waitKey(0);
-    // cv::imshow("Rotated Image", rotated_image2);
-    // cv::waitKey(0);
-    // cv::imshow("Rotated Image", rotated_image3);
-    // cv::waitKey(0);
-    // cv::imshow("Rotated Image", rotated_image4);
-    // cv::waitKey(0);
-    // cv::imshow("Rotated Image", rotated_image5);
-    // cv::waitKey(0);
-
-    cv::imshow("Rotated Image", image1);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image2);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image3);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image4);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image5);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image6);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image7);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image8);
-    cv::waitKey(0);
-    cv::imshow("Rotated Image", image9);
-    cv::waitKey(0);
-
+    std::string inputFolder = "/home/joshua/Snake_Gate/masks";
+    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_detection";
+    processFolder(inputFolder, outputFolder);
 
     return 0;
  

@@ -981,8 +981,8 @@ int main() {
     // std::string inputFolder = "/home/joshua/Snake_Gate/dataset_seg_241231/labels/segmented";
     // std::string outputFolder = "/home/joshua/Snake_Gate/dataset_seg_241231/labels/snake_gate";
 
-    std::string inputFolder = "/home/joshua/Snake_Gate/masks_20241224/r3w1d3_1";
-    std::string outputFolder = "/home/joshua/Snake_Gate/masks_20241224/snake_gate_detection";
+    std::string inputFolder = "/home/joshua/Snake_Gate/masks";
+    std::string outputFolder = "/home/joshua/Snake_Gate/snake_gate_corner_refinement";
 
 
     processFolder(inputFolder, outputFolder);
