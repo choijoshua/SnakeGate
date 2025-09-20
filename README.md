@@ -28,8 +28,8 @@ cd build
 
 <p align="center">
   <img src="snake_gate_corner_refinement_results/result_1.png" width="200"/>
-  <img src="snake_gate_corner_refinement_results/result_2.png" width="200"/>
   <img src="snake_gate_corner_refinement_results/result_3.png" width="200"/>
-  <img src="snake_gate_corner_refinement_results/result_4.png" width="200"/>
+  <img src="snake_gate_corner_refinement_results/result_7.png" width="200"/>
+  <img src="snake_gate_corner_refinement_results/result_10.png" width="200"/>
 </p>
 
