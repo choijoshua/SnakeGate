@@ -343,7 +343,7 @@ void detectGateCorners(const std::string& inputPath, const std::string& outputPa
 
     // Process the image (this is where gate detection logic would go)
     Gate gate;
-    gate_detection(image, gate, 40, 50);
+    gate_detection(image, gate, 40, 10);
     // For demonstration, we save the same image to the output
     cv::imwrite(outputPath, image);
 }
